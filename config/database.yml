@@ -4,6 +4,8 @@ development:
   encoding: utf8
   host: localhost
   port: 5432
+  user: matt
+  password:
   pool: 5
   timeout: 5000
 
@@ -16,6 +18,8 @@ test:
   encoding: utf8
   host: localhost
   port: 5432
+  user: matt
+  password:
   pool: 5
   timeout: 5000
 
@@ -25,5 +29,7 @@ production:
   encoding: unicode
   host: localhost
   port: 5432
+  user: matt
+  password:
   pool: 5
   timeout: 5000
