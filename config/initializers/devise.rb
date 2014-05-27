@@ -250,7 +250,7 @@ Devise.setup do |config|
   if Rails.env.production?
     ENV['DEVISE_SECRET_KEY'] = '38f811558413c17fa154c054ec529604a79a26ed6f13138659f78eff15c3fc116a462d058762111eb72b755a6f0d68c20e11ea0eee8be2d11f7a397b7004bcf7'
   else
-      fail 'No Production Mode running'
+      fail 'Production Mode running Failed'
   end
   #if Rails.env.production? && ENV['DEVISE_SECRET_KEY'].blank?
   #  fail 'The DEVISE_SECRET_KEY environment variable is not set on your production' \

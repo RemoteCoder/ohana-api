@@ -7,11 +7,17 @@
 # no regular words or you'll be exposed to dictionary attacks.
 # You can use `rake secret` to generate a secure secret key.
 
-if Rails.env.production? && ENV['SECRET_TOKEN'].blank?
-  fail 'The SECRET_TOKEN environment variable is not set on your production' \
-  ' server. To generate a random token, run "rake secret" from the command' \
-  ' line, then set it in production. If you\'re using Heroku, you can set it ' \
-  'like this: "heroku config:set SECRET_TOKEN=the_token_you_generated".'
+#if Rails.env.production? && ENV['SECRET_TOKEN'].blank?
+#  fail 'The SECRET_TOKEN environment variable is not set on your production' \
+#  ' server. To generate a random token, run "rake secret" from the command' \
+#  ' line, then set it in production. If you\'re using Heroku, you can set it ' \
+#  'like this: "heroku config:set SECRET_TOKEN=the_token_you_generated".'
+#end
+
+if Rails.env.production?
+  ENV['SECRET_TOKEN'] = '38f811558413c17fa154c054ec529604a79a26ed6f13138659f78eff15c3fc116a462d058762111eb72b755a6f0d68c20e11ea0eee8be2d11f7a397b7004bcf7'
+else
+  fail 'Production Mode running Failed'
 end
 
 # Make sure the secrets in this file are kept private
