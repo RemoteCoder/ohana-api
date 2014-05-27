@@ -106,3 +106,5 @@ gem 'friendly_id', '~> 5.0.3'
 
 # Customizable Settings
 gem 'rails_config'
+
+gem 'thin'
