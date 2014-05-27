@@ -101,4 +101,4 @@ OhanaApi::Application.configure do
   # This is a Rails 4.1 setting. Uncomment after upgrading.
   # config.active_record.dump_schema_after_migration = false
 end
-ENV['DEVISE_SECRET_KEY'] = '0194fbe14500255c7255c0c80065e0bd13e5b14158f2d5a04bc67f7390a168f0e1e3374ac19d4557f34e0d61a50eb92e2d0ae6bc9a4688bc3816dc6138849e28'
+DEVISE_SECRET_KEY = '0194fbe14500255c7255c0c80065e0bd13e5b14158f2d5a04bc67f7390a168f0e1e3374ac19d4557f34e0d61a50eb92e2d0ae6bc9a4688bc3816dc6138849e28'
