@@ -63,21 +63,42 @@ OhanaApi::Application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
+
+  #---------------------------------------------------------------
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: ENV['MAILER_URL'] }
+  #config.action_mailer.default_url_options = { host: ENV['MAILER_URL'] }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
+  #config.action_mailer.perform_deliveries = true
+  config.action_mailer.perform_deliveries = false
 
-  config.action_mailer.default charset: 'utf-8'
+  #config.action_mailer.default charset: 'utf-8'
+  #
+  #config.action_mailer.smtp_settings = {
+  #  port:           '587',
+  #  address:        'smtp.mandrillapp.com',
+  #  user_nam:       ENV['MANDRILL_USERNAME'],
+  #  password:       ENV['MANDRILL_APIKEY'],
+  #  domain:         'heroku.com',
+  #  authentication: :plain
+  #}
+#--------------------------------------------------------
+#  config.action_mailer.default_url_options = { :host => 'www.callforamerica.com',:protocol => 'http' }
+#  # Don't care if the mailer can't send
+#  config.action_mailer.perform_deliveries = true
+#  config.action_mailer.raise_delivery_errors = true
+#
+#  ActionMailer::Base.delivery_method = :smtp
+#  ActionMailer::Base.smtp_settings = {
+#      :address => "smtp.gmail.com",
+#      :port => 587,
+#      :domain => "gmail.com",
+#      :authentication => :login,
+#      :user_name => "shahc4a",
+#      :password => "shahcall4a",
+#      :enable_starttls_auto => true,
+#      :openssl_verify_mode => 'none'
+#  }
 
-  config.action_mailer.smtp_settings = {
-    port:           '587',
-    address:        'smtp.mandrillapp.com',
-    user_nam:       ENV['MANDRILL_USERNAME'],
-    password:       ENV['MANDRILL_APIKEY'],
-    domain:         'heroku.com',
-    authentication: :plain
-  }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).
