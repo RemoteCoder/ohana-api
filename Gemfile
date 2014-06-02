@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.1'
 gem 'rails', '~> 4.0.4'
+gem 'rake', '10.3.1'
 
 gem 'pg'
 
@@ -91,3 +92,5 @@ gem 'friendly_id', '~> 5.0.3'
 
 # Customizable Settings
 gem 'rails_config'
+
+gem 'thin'
