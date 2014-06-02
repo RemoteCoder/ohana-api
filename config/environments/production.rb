@@ -80,7 +80,7 @@ OhanaApi::Application.configure do
   #  authentication: :plain
   #}
 
-  config.action_mailer.default_url_options = { :host => 'www.callforamerica.com',:protocol => 'http' }
+  config.action_mailer.default_url_options = { :host => 'tts.callforamerica.com',:protocol => 'http', :port => 8080 }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
       :address => "smtp.gmail.com",
